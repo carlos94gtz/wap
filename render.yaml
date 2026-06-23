@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: whatsapp-webhook
+    env: python
+    startCommand: python work/whatsapp_webhook.py
+    autoDeploy: true
+    envVars:
+      - key: WHATSAPP_VERIFY_TOKEN
+        sync: false
